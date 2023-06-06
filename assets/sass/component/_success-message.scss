@@ -1,0 +1,62 @@
+.success-message {
+  padding: 2.5rem 1.5rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  min-height: 100vh;
+  background-color: $theme-white-color;
+
+  @include media-breakpoint-up(lg) {
+    width: 31.5rem;
+    padding: 3rem 4rem 4.25rem;
+    border-radius: 2.5rem;
+    min-height: unset;
+  }
+
+  &__container {
+    margin-top: 6.75rem;
+
+    @include media-breakpoint-up(md) {
+      margin-top: unset;
+    }
+  }
+
+  &__icon {
+    display: block;
+    margin-bottom: 2.5rem;
+    @include size(4rem);
+    background-image: url("./../../../assets/images/icon-list.svg");
+    background-size: cover;
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(md) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__description {
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+
+    @include media-breakpoint-up(md) {
+      margin-bottom: 2.5rem;
+    }
+  }
+
+  &__email {
+    font-weight: bold;
+  }
+}
+
+.block {
+  display: block;
+}
+
+.hidden {
+  display: none;
+}

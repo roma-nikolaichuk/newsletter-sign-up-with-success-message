@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="author" content="Roman Nikolaichuk">
+    <meta
+      name="description"
+      content="Newsletter sign-up form with success message Solution for FrontendMentor.io. Users should be able to: view the optimal layout for the interface depending on their device's screen size, add their email and submit the form, see a success message with their email after successfully submitting the form, see hover and focus states for all interactive elements on the page, see form validation messages if: the field is left empty, the email address is not formatted correctly."
+    >
+    <meta
+      name="keywords"
+      content="Frontend Mentor, Frontend, Mentor, Newsletter sign-up form with success message, Newsletter sign-up form with success message Solution, Newsletter sign-up form, Roman Nikolaichuk, FrontendMentor.io, Roman Nikolaichuk Frontend"
+    >
+    <link
+      rel="icon"
+      type="image/png"
+      sizes="32x32"
+      href="./assets/images/favicon-32x32.png"
+    >
+
+    <title>
+      Frontend Mentor | Newsletter sign-up form with success message
+    </title>
+    <link rel="stylesheet" href="./assets/css/style.css">
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+    >
+  </head>
+  <body>
+    <main class="container">
+      <h1 class="sr-only">Newsletter sign-up form with success message</h1>
+      
+      <div class="newsletter" id="newsletter">
+        <picture style="display: flex" class="newsletter__picture">
+          <source
+            media="(min-width:992px)"
+            srcset="./assets/images/illustration-sign-up-desktop.svg"
+          >
+          <img
+            src="./assets/images/illustration-sign-up-mobile.svg"
+            alt="Newsletter image"
+            class="newsletter__image"
+          >
+        </picture>
+
+        <div class="newsletter__content">
+          <h1 class="newsletter__heading">Stay updated!</h1>
+          <p class="newsletter__description">
+            Join 60,000+ product managers receiving monthly updates on:
+          </p>
+
+          <ul class="newsletter__points">
+            <li>Product discovery and building what matters</li>
+            <li>Measuring to ensure updates are a success</li>
+            <li>And much more!</li>
+          </ul>
+
+          <form id="newsletterForm" class="newsletter__form" novalidate>
+            <div class="newsletter__form-group">
+              <label class="newsletter__form-label" for="email"
+                >Email address
+                <span
+                  id="newsletter__form-error"
+                  class="newsletter__form-error"
+                >
+                </span
+              ></label>
+              <input
+                class="newsletter__form-input"
+                type="email"
+                id="email"
+                placeholder="email@company.com"
+                required
+              >
+            </div>
+
+            <button
+              type="submit"
+              class="newsletter__form-button button--primary"
+            >
+              Subscribe to monthly newsletter
+            </button>
+          </form>
+        </div>
+      </div>
+
+      <div
+        id="successMessage"
+        class="success-message hidden"
+        role="alert"
+        aria-live="polite"
+      >
+        <div class="success-message__container">
+          <i class="success-message__icon"></i>
+          <h2 class="success-message__heading">Thanks for subscribing!</h2>
+          <p class="success-message__description">
+            A confirmation email has been sent to
+            <span class="success-message__email"></span>. Please open it and
+            click the button inside to confirm your subscription.
+          </p>
+        </div>
+
+        <button
+          id="dismissButton"
+          class="button--primary"
+          aria-label="Dismiss message"
+        >
+          Dismiss message
+        </button>
+      </div>
+    </main>
+
+    <footer class="footer">
+      <button
+        class="footer__button js-toggle-tip animate__animated animate__fadeInBottomRight"
+        type="button"
+        aria-label="Attribution"
+        aria-haspopup="true"
+        aria-expanded="false"
+        aria-controls="attribution"
+      >
+        <img
+          class="footer__image"
+          src="https://avatars.githubusercontent.com/u/107611767?s=400&u=af2347175f31d710bee7ec634f994ae53d460731&v=4"
+          alt="GitHub Avatar"
+          width="50"
+          height="50"
+        >
+      </button>
+
+      <div
+        id="attribution"
+        role="tooltip"
+        class="footer__attribution footer__dialog js-tooltip"
+      >
+        <p class="footer__text">
+          Challenge by
+          <a
+            href="https://www.frontendmentor.io/challenges/newsletter-signup-form-with-success-message-3FC1AZbNrv"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open in new tab"
+            class="footer__link"
+            >Frontend Mentor</a
+          >. Coded by
+          <a
+            href="https://github.com/roma-nikolaichuk/newsletter-sign-up-with-success-message"
+            target="_blank"
+            rel="noreferrer noopener"
+            title="Open in new tab"
+            class="footer__link"
+            >Roman Nikolaichuk</a
+          >.
+        </p>
+      </div>
+    </footer>
+
+    <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+    <script src="./assets/js/screenAnimation.js"></script>
+    <script src="./assets/js/newsletter-form.js"></script>
+    <script src="./assets/js/success-message.js"></script>
+    <script src="./assets/js/footer.js"></script>
+  </body>
+</html>

@@ -1,0 +1,109 @@
+.newsletter {
+  @include flex();
+  background-color: $theme-white-color;
+
+  @include media-breakpoint-up(lg) {
+    flex-direction: row-reverse;
+    gap: 3.875rem;
+    padding: 1.5rem;
+    padding-left: 4rem;
+    border-radius: 2rem;
+  }
+
+  &__content {
+    padding: 2.625rem 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      max-width: 375px;
+      padding: 0;
+      @include flex(column, center, stretch);
+    }
+  }
+
+  &__heading {
+    font-size: 2.5rem;
+    font-weight: bold;
+    margin-bottom: 1.5rem;
+
+    @include media-breakpoint-up(lg) {
+      font-size: 3.5rem;
+    }
+  }
+
+  &__description {
+    line-height: 1.5;
+    margin-bottom: 1.5rem;
+  }
+
+  &__points {
+    line-height: 1.5;
+    margin-bottom: 2.5rem;
+
+    @include media-breakpoint-up(lg) {
+      margin-bottom: 2rem;
+    }
+
+    li {
+      position: relative;
+      padding-left: 2.25rem;
+      margin-bottom: 0.625rem;
+
+      &::before {
+        content: "";
+        position: absolute;
+        left: 0;
+        @include size(1.25rem);
+        background-image: url("./../../../assets/images/icon-list.svg");
+        background-size: cover;
+      }
+    }
+  }
+
+  &__form {
+    display: flex;
+    flex-direction: column;
+
+    &-group {
+      display: flex;
+      flex-direction: column;
+    }
+
+    &-label {
+      display: flex;
+      font-size: 0.75rem;
+      font-weight: bold;
+      margin-bottom: 0.75rem;
+    }
+
+    &-error {
+      margin-left: auto;
+      color: $theme-tomato-color;
+    }
+
+    &-input {
+      margin-bottom: 1.5rem;
+      padding: 1.1rem 1.5rem;
+      border: 1px solid $theme-grey-color;
+      border-radius: 0.5rem;
+
+      &--valid {
+        border-color: $theme-dark-slate-grey-color;
+      }
+
+      &--invalid {
+        border-color: $theme-tomato-color;
+        color: $theme-tomato-color;
+        background-color: hsla(4, 100%, 67%, 0.15);
+      }
+
+      &:hover {
+        cursor: pointer;
+        border-color: $theme-dark-slate-grey-color;
+      }
+
+      &::placeholder {
+        opacity: 0.6;
+      }
+    }
+  }
+}

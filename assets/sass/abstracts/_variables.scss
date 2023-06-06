@@ -1,0 +1,42 @@
+@font-face {
+  font-family: "Roboto";
+  src: url("./../../../assets/fonts/Roboto-Regular.ttf") format("truetype");
+  font-weight: normal;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Roboto";
+  src: url("./../../../assets/fonts/Roboto-Bold.ttf") format("truetype");
+  font-weight: bold;
+  font-style: normal;
+}
+
+// Font Family
+$font-family: "Roboto", sans-serif;
+
+// Primary Colors
+$theme-tomato-color: hsl(4, 100%, 67%);
+
+// Neutral Colors
+$theme-dark-slate-grey-color: hsl(234, 29%, 20%);
+$theme-charcoal-grey-color: hsl(235, 18%, 26%);
+$theme-grey-color: hsl(231, 7%, 60%);
+$theme-white-color: hsl(0, 0%, 100%);
+
+$media: (
+  sm: 576px,
+  // Small devices
+  md: 768px,
+  // Medium devices
+  lg: 992px,
+  // Large devices
+  xl: 1200px,
+  // X-Large devices
+  2xl: 1400px,
+  // XX-Large devices
+  3xl: 1900px,
+  // XXX-Large devices
+  rwd: 364px,
+  // Custom device
+);

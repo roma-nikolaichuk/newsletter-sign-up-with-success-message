@@ -1,0 +1,12 @@
+body {
+  width: 100%;
+  min-height: 100vh;
+  @include font-style($font-family, 1rem, 400);
+  color: $theme-dark-slate-grey-color;
+
+  @include media-breakpoint-up(lg) {
+    display: grid;
+    place-content: center;
+    background-color: $theme-charcoal-grey-color;
+  }
+}
